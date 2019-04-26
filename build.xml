@@ -1,0 +1,17 @@
+<?xml version = "1.0"?>
+<project name="New Project" basedir="." default = "compile">
+
+<target name="compile" depends="output">
+       <javac srcdir="." includeantruntime="true" includes="Program1.java" destdir="."></javac>
+</target>
+
+
+
+<target name = "output">
+
+      <java fork = "true" failonerror = "yes" classname = "Program1">
+
+      </java>
+
+</target>
+</project>
