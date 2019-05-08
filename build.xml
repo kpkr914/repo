@@ -1,13 +1,13 @@
 <?xml version = "1.0"?>
-<project name="New Project" basedir="." default = "compile">
+<project name="New Project" basedir="." default = "output">
 
-<target name="compile" depends="output">
+<target name="compile">
        <javac srcdir="." includeantruntime="true" includes="A.java" destdir="."></javac>
 </target>
 
 
 
-<target name = "output">
+<target name = "output" depends="compile">
 
       <java fork = "true" failonerror = "yes" classname = "A">
 
